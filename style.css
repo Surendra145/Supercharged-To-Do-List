@@ -1,0 +1,139 @@
+/* General Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    transition: background 0.3s ease-in-out;
+}
+
+/* Different Themes */
+body.blue { background: linear-gradient(135deg, #1E90FF, #4169E1); }
+body.green { background: linear-gradient(135deg, #2E8B57, #3CB371); }
+body.dark { background: linear-gradient(135deg, #232526, #414345); color: white; }
+
+.container {
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 400px;
+    transition: transform 0.3s ease;
+}
+
+.container:hover {
+    transform: scale(1.02);
+}
+
+/* Search and Theme Selector */
+.top-controls {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+input, select, button {
+    padding: 8px;
+    border: none;
+    border-radius: 5px;
+}
+
+button {
+    background: #28a745;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background: #218838;
+}
+
+/* Progress Bar */
+.progress-container {
+    width: 100%;
+    height: 10px;
+    background: #ddd;
+    border-radius: 5px;
+    margin: 10px 0;
+    overflow: hidden;
+}
+
+.progress-bar {
+    height: 100%;
+    width: 0%;
+    background: #28a745;
+    transition: width 0.5s;
+}
+
+/* Task List */
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    background: #f4f4f4;
+    padding: 10px;
+    margin: 5px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 5px;
+    cursor: grab;
+    transition: all 0.3s ease;
+}
+
+li:hover {
+    background: #e0e0e0;
+}
+
+/* Overdue Tasks */
+li.overdue {
+    border: 2px solid red;
+}
+
+/* Edit & Delete Buttons */
+.task-actions {
+    display: flex;
+    gap: 5px;
+}
+
+.edit-btn, .delete-btn {
+    background: orange;
+    color: white;
+    border: none;
+    padding: 5px 8px;
+    cursor: pointer;
+    border-radius: 3px;
+    transition: background 0.3s ease;
+}
+
+.edit-btn:hover {
+    background: darkorange;
+}
+
+.delete-btn {
+    background: red;
+}
+
+.delete-btn:hover {
+    background: darkred;
+}
+
+/* Responsive Design */
+@media (max-width: 450px) {
+    .container {
+        width: 90%;
+    }
+}

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Supercharged To-Do List</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h2>📌 Supercharged To-Do List  
+            <button class="theme-toggle" onclick="toggleTheme()">🌙</button>
+        </h2>
+
+        <!-- Search & Theme Selection -->
+        <div class="top-controls">
+            <input type="text" id="search" placeholder="🔍 Search tasks..." onkeyup="filterTasks()">
+            <select id="theme-selector" onchange="changeTheme(this.value)">
+                <option value="default">Default</option>
+                <option value="blue">Blue</option>
+                <option value="green">Green</option>
+                <option value="dark">Dark</option>
+            </select>
+        </div>
+
+        <!-- Progress Bar -->
+        <div class="progress-container">
+            <div class="progress-bar" id="progress-bar"></div>
+        </div>
+
+        <!-- Task Input -->
+        <div class="input-container">
+            <input type="text" id="task-input" placeholder="Enter your task..." onkeydown="handleEnter(event)">
+            <input type="date" id="due-date">
+            <select id="category">
+                <option value="Work">Work</option>
+                <option value="Personal">Personal</option>
+                <option value="Shopping">Shopping</option>
+            </select>
+            <button onclick="addTask()">➕ Add</button>
+        </div>
+
+        <!-- Task List -->
+        <ul id="task-list"></ul>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
